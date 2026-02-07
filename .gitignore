@@ -1,0 +1,8 @@
+# Ignore netlab generated files/folders
+**/ansible.cfg
+**/clab.yml
+**/hosts.yml
+**/netlab.snapshot.pickle
+**/node_files/
+**/group_vars/
+**/host_vars/

@@ -1,0 +1,12 @@
+provider: clab
+defaults.device: frr
+module: [ ospf ]
+ospf.af: [ ipv4 ]
+
+# Define IP addressing for auto-assignment
+addressing:
+  loopback.ipv4: 10.255.0.0/24    # Loopback addresses for routers
+  p2p.ipv4: 10.0.0.0/24           # Point-to-point links
+
+nodes: [ r1, r2 ]
+links: [ r1, r2, r1-r2 ]
