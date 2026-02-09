@@ -1,0 +1,22 @@
+name: ospf-1
+provider: clab
+defaults.device: eos
+module: [ ospf ]
+
+nodes: [ e1, c1, c2, e2 ]
+
+links:
+- e1:
+  c1:
+  pool: p2p
+- e1:
+  c2:
+  pool: p2p
+- c1:
+  e2:
+  pool: p2p
+  bandwidth: 1000
+- c2:
+  e2:
+  pool: p2p
+  bandwidth: 1000
