@@ -1,0 +1,40 @@
+e1 {
+  shape: "oval"
+  style.font-size: 20
+  style.fill: "#ff9f01"
+  style.stroke: "black"
+  label: "e1 [frr]\n10.0.0.1/32"
+}
+c1 {
+  shape: "oval"
+  style.font-size: 20
+  style.fill: "#ff9f01"
+  style.stroke: "black"
+  label: "c1 [frr]\n10.0.0.2/32"
+}
+c2 {
+  shape: "oval"
+  style.font-size: 20
+  style.fill: "#ff9f01"
+  style.stroke: "black"
+  label: "c2 [frr]\n10.0.0.3/32"
+}
+e2 {
+  shape: "oval"
+  style.font-size: 20
+  style.fill: "#ff9f01"
+  style.stroke: "black"
+  label: "e2 [frr]\n10.0.0.4/32"
+}
+e1 -- c1 {
+  style.stroke: "black"
+}
+e1 -- c2 {
+  style.stroke: "black"
+}
+c1 -- e2 {
+  style.stroke: "black"
+}
+c2 -- e2 {
+  style.stroke: "black"
+}

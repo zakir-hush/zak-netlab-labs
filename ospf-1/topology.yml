@@ -1,6 +1,6 @@
-name: ospf-1
+name: ospf-eos
 provider: clab
-defaults.device: eos
+defaults.device: frr
 module: [ ospf ]
 
 nodes: [ e1, c1, c2, e2 ]
