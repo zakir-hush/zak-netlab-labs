@@ -6,3 +6,5 @@
 **/node_files/
 **/group_vars/
 **/host_vars/
+**/graph.d2
+**/topology.svg
