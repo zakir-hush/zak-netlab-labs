@@ -1,0 +1,27 @@
+name: vxlan-fabric
+provider: clab
+defaults.device: eos
+
+plugin: [ fabric ]
+fabric.spines: 2
+fabric.leafs: 3
+
+fabric.spine.name: spine{count}
+fabric.leaf.name: leaf{count}
+
+groups:
+  _auto_create: True
+  leafs:
+    module: [ ospf, vlan, vxlan ]
+  spines:
+    module: [ ospf ]
+  hosts:
+    members: [ H1, H2, H3, H4 ]
+    device: linux
+
+vlan.mode: bridge
+vlans:
+  orange:
+    links: [ H1-leaf1, H2-leaf2 ]
+  blue:
+    links: [ H3-leaf1, H4-leaf3 ]
